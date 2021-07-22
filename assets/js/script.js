@@ -1,6 +1,6 @@
 var scores, roundScore, activePlayer, prevDiceRoll, gamePlaying;
 
-// Initilizing the game
+// Initializing the game
 init();
 
 // Adding an event listener to the button that makes the dice roll (using an anonymous function)
@@ -25,6 +25,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = '0';
             nextPlayer();
+
             // Update the round score if the rolled number was not a 1
         } else if (dice1 !== 1 && dice2 !== 1) {
             // Add score if the dice number is different from 1
